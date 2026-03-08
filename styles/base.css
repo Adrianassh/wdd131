@@ -1,7 +1,7 @@
 /* Base typography and color palette */
 :root {
     --primary: #784877;
-    --primary-dark:#db85ed;
+    --primary-dark: #db85ed;
     --accent: #f4b41a;
     --bg: #f4f7fb;
     --card-border: #d0d7e2;
@@ -15,7 +15,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     height: 100%;
 }
@@ -45,7 +46,8 @@ header {
 }
 
 #course-title {
-    display: block; /* requirement: span must be block for easier centering */
+    display: block;
+    /* requirement: span must be block for easier centering */
     text-align: center;
     padding: 1rem 0.5rem;
     font-weight: 600;
@@ -57,7 +59,8 @@ header {
 }
 
 nav {
-    display: flex; /* requirement: use flexbox for navigation layout */
+    display: flex;
+    /* requirement: use flexbox for navigation layout */
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
@@ -94,7 +97,7 @@ main {
     gap: 1.5rem;
 }
 
-main > h1 {
+main>h1 {
     grid-area: title;
     text-align: center;
     font-family: "Playfair Display", "Times New Roman", serif;
@@ -207,7 +210,7 @@ main > h1 {
     margin: 0.5rem 0 1rem;
 }
 
-#web-resources li + li {
+#web-resources li+li {
     margin-top: 0.4rem;
 }
 

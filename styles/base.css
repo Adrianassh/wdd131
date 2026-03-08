@@ -23,7 +23,7 @@ html {
 body {
     margin: 0;
     height: 100%;
-    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Nunito", system-ui, "Segoe UI", sans-serif;
     color: var(--text-main);
     background-color: var(--bg);
 }

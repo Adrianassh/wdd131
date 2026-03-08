@@ -111,6 +111,14 @@ main > h1 {
     grid-area: resources;
 }
 
+#web-resources img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 200px;
+}
+
 .card {
     background-color: white;
     border: 1px solid var(--card-border);

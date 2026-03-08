@@ -39,6 +39,7 @@ a:focus {
 /* Header and navigation */
 header {
     margin: 0;
+    padding: 0;
     background-color: var(--primary);
     color: white;
 }
@@ -49,6 +50,10 @@ header {
     padding: 1rem 0.5rem;
     font-weight: 600;
     letter-spacing: 0.06em;
+}
+
+#header-title {
+    margin: 0;
 }
 
 nav {

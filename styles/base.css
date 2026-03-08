@@ -1,0 +1,229 @@
+/* Base typography and color palette */
+:root {
+    --primary: #784877;
+    --primary-dark:#db85ed;
+    --accent: #f4b41a;
+    --bg: #f4f7fb;
+    --card-border: #d0d7e2;
+    --text-main: #222222;
+    --text-muted: #555555;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Header and navigation */
+header {
+    background-color: var(--primary);
+    color: white;
+}
+
+#course-title {
+    display: block; /* requirement: span must be block for easier centering */
+    text-align: center;
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+nav {
+    display: flex; /* requirement: use flexbox for navigation layout */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-dark);
+    padding: 0.75rem 1rem;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--accent);
+}
+
+/* Main layout for title and cards */
+main {
+    max-width: 1100px;
+    margin: 2rem auto 3rem;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "title title"
+        "about resources";
+    gap: 1.5rem;
+}
+
+main > h1 {
+    grid-area: title;
+    text-align: center;
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin: 0 0 0.5rem;
+}
+
+#about-me {
+    grid-area: about;
+}
+
+#web-resources {
+    grid-area: resources;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.card-content,
+.location,
+#web-resources ul {
+    padding: 1rem 1.25rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.card-content p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.card-content img {
+    max-width: 180px;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.location {
+    border-top: 1px solid var(--card-border);
+}
+
+.location h3 {
+    margin: 0.25rem 0 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.location-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.location figure {
+    margin: 0;
+    text-align: center;
+}
+
+.location img {
+    width: 120px;
+    border-radius: 0.25rem;
+    border: 1px solid var(--card-border);
+}
+
+.location figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.location p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Web resources list styles */
+#web-resources ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+#web-resources li + li {
+    margin-top: 0.4rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 1rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+footer span {
+    color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "about"
+            "resources";
+    }
+
+    .card-content,
+    .location-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

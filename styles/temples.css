@@ -54,25 +54,23 @@ header>div {
 }
 
 #menu::before {
-    content: "☰"; /* Hamburger symbol */
+    content: "☰";
+    /* Hamburger symbol */
 }
 
 #menu.open::before {
-    content: "✕"; /* Close symbol */
+    content: "✕";
+    /* Close symbol */
 }
 
 .navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.navigation.open {
-    display: flex;
-}
-
 .navigation a {
-    display: block;
+    display: none;
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
@@ -80,6 +78,10 @@ header>div {
     text-align: center;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation.open a {
+    display: block;
 }
 
 /* Navigation Hover Effect */

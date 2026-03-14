@@ -1,0 +1,44 @@
+/* 
+    temples-large.css 
+    Media Query for larger screens 
+*/
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        align-items: center;
+    }
+
+    header>div {
+        margin-bottom: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Change grid to 2 columns for tablet view */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Change grid to 3 columns for desktop view */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

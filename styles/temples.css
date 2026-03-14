@@ -1,0 +1,150 @@
+/* Color Scheme Variables */
+:root {
+    --primary-color: #2b3a42;
+    --secondary-color: #f1f2f6;
+    --accent-color: #d35400;
+    --text-color: #333333;
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header>div {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Nav with Flexbox */
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger symbol */
+}
+
+#menu.open::before {
+    content: "✕"; /* Close symbol */
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centered horizontally */
+    padding: 2rem 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* CSS Grid for Main Column Figures (Mobile First: 1 column) */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+figure {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: white;
+    color: var(--primary-color);
+    border-top: 1px solid #eee;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

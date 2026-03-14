@@ -19,12 +19,12 @@
         display: none;
     }
 
-    .navigation {
+    nav {
         flex-direction: row;
         width: auto;
     }
 
-    .navigation a {
+    nav a {
         display: block;
         padding: 0.5rem 1rem;
     }

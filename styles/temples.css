@@ -63,13 +63,13 @@ header>div {
     /* Close symbol */
 }
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.navigation a {
+nav a {
     display: none;
     color: white;
     text-decoration: none;
@@ -80,7 +80,7 @@ header>div {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navigation.open a {
+nav.open a {
     display: block;
 }
 

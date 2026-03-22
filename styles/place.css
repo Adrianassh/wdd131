@@ -1,0 +1,106 @@
+:root {
+    --primary-yellow: #FCD116;
+    --primary-blue: #003893;
+    --primary-red: #CE1126;
+    --text-color: #333;
+    --bg-color: #fff;
+    --card-bg: rgba(206, 17, 38, 0.9); /* Transparent Red */
+    --card-text: #fff;
+    --header-footer-bg: #FCD116;
+    --header-footer-inner: #003893;
+    --heading-font: 'Eagle Lake', cursive;
+    --body-font: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: var(--header-footer-bg);
+    padding: 1rem;
+}
+
+header h1, footer {
+    background-color: var(--header-footer-inner);
+    color: #fff;
+    text-align: center;
+    border: 4px solid var(--primary-yellow);
+    padding: 0.5rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-yellow);
+    border-bottom: 2px solid var(--primary-yellow);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+}
+
+dd {
+    text-align: left;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer span {
+    color: var(--primary-yellow);
+}

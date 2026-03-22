@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colombia - WDD 131</title>
+    <meta name="description" content="Information about Colombia, including its geography, population, and current weather.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Colombia</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/colombia_hero.png" media="(min-width: 768px)">
+                <img src="images/colombia_hero.png" alt="Colombia Landscape" width="1500" height="1000">
+            </picture>
+        </div>
+        <section class="data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>1,141,748 sq km</dd>
+                <dt>Population:</dt>
+                <dd>52,000,000</dd>
+                <dt>Capital:</dt>
+                <dd>Bogotá</dd>
+                <dt>Languages:</dt>
+                <dd>Spanish</dd>
+                <dt>Currency:</dt>
+                <dd>Colombian Peso (COP)</dd>
+                <dt>Time Zone:</dt>
+                <dd>UTC-5 (COT)</dd>
+                <dt>Calling Code:</dt>
+                <dd>+57</dd>
+                <dt>Internet TLD:</dt>
+                <dd>.co</dd>
+            </dl>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-info">
+                <div class="weather-icon">
+                    <img src="images/weather_icon.png" alt="Weather Icon" id="weather-icon">
+                </div>
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd id="temp">14 °C</dd>
+                    <dt>Conditions:</dt>
+                    <dd id="cond">Clouded</dd>
+                    <dt>Wind:</dt>
+                    <dd id="wind">10 km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd id="chill">N/A</dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Adriana Sandoval | Colombia</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

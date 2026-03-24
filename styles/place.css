@@ -71,6 +71,11 @@ section h2 {
     text-align: center;
 }
 
+section h2::after {
+    content: " 🇨🇴"; /* Colombian flag emoji as decorative element */
+    font-size: 1.2rem;
+}
+
 dl {
     display: grid;
     grid-template-columns: 1fr 1fr;

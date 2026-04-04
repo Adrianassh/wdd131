@@ -1,0 +1,87 @@
+/* 
+ACME Wildwest Services - Account Feature Comparison Table Styles
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --table-header-bg: #000;
+  --table-header-text: #fff;
+  --table-subheader-bg: #444;
+  --table-border: #ddd;
+  --table-zebra-bg: #f2f2f2;
+  --table-hover-bg: #e9ecef;
+  --text-color: #333;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
+thead tr:first-child th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+thead tr:last-child th {
+  background-color: var(--table-subheader-bg);
+  color: var(--table-header-text);
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+th, td {
+  border: 1px solid var(--table-border);
+  padding: 1rem;
+}
+
+tbody td:first-child {
+  text-align: left;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+tbody td:not(:first-child) {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+  background-color: var(--table-zebra-bg);
+}
+
+tbody tr:hover {
+  background-color: var(--table-hover-bg);
+  transition: background-color 0.2s ease;
+}
+
+/* Icons Colors (Optional for better contrast) */
+tbody td:nth-child(n+2) {
+  color: #555;
+}

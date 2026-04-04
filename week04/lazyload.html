@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of lazy loading images with CSS fade-in animations and portrait layout.">
+    <title>Lazy Loading Demonstration - ACME Wildwest Services</title>
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading Gallery</h1>
+    </header>
+    <main>
+        <img src="https://picsum.photos/400/600?random=1" alt="Portrait Placeholder 1" width="400" height="600" loading="lazy">
+        <img src="https://picsum.photos/400/600?random=2" alt="Portrait Placeholder 2" width="400" height="600" loading="lazy">
+        <img src="https://picsum.photos/400/600?random=3" alt="Portrait Placeholder 3" width="400" height="600" loading="lazy">
+        <img src="https://picsum.photos/400/600?random=4" alt="Portrait Placeholder 4" width="400" height="600" loading="lazy">
+        <img src="https://picsum.photos/400/600?random=5" alt="Portrait Placeholder 5" width="400" height="600" loading="lazy">
+        <img src="https://picsum.photos/400/600?random=6" alt="Portrait Placeholder 6" width="400" height="600" loading="lazy">
+    </main>
+    <footer>
+        <p>&copy; <span id="year">2026</span> | ACME Wildwest Services | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

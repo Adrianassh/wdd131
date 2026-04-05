@@ -113,14 +113,8 @@ select, input[type="date"], input[type="text"], textarea {
 }
 
 .checkbox-container label {
-    display: flex;
-    align-items: center;
     font-weight: normal;
     margin-top: 0;
-}
-
-.checkbox-container input {
-    margin-right: 0.5rem;
 }
 
 input[type="submit"] {

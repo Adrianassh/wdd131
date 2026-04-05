@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - WDD 131</title>
+    <meta name="description" content="Confirmation page for product review submission.">
+    <meta name="author" content="Adriana Sandoval">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Increment Review Counter
+            let count = Number(window.localStorage.getItem("reviewCount")) || 0;
+            count++;
+            window.localStorage.setItem("reviewCount", count);
+
+            // Display Count
+            document.getElementById("review-count").textContent = count;
+
+            // Update Footer
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = document.lastModified;
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main>
+        <section class="confirmation-message">
+            <h2>Thank You!</h2>
+            <p>Your product review has been successfully submitted.</p>
+            <p>Total reviews completed: <span id="review-count"></span></p>
+            <a href="form.html" class="back-link">Submit another review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Adriana Sandoval | last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #dbd360; /* Golden Yellow */
+    --secondary-color: #1a237e; /* Navy Blue */
+    --accent-color: #f5f2dd; /* Light Yellow */
+    --bg-color: hsl(0, 0%, 100%);
+    --text-color: #212121;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+.color-palette {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.primary { background-color: var(--primary-color); }
+.secondary { background-color: var(--secondary-color); }
+.accent { background-color: var(--accent-color); }
+
+.wireframes img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .wireframes {
+        display: flex;
+        gap: 2rem;
+    }
+    .wireframe-item {
+        flex: 1;
+    }
+}

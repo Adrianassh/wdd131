@@ -103,3 +103,57 @@ function setupFormHandling(form) {
         }
     });
 }
+
+// Modern Scroll Reveal Animation
+function setupScrollReveal() {
+    const sections = document.querySelectorAll('section');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(30px)";
+        section.style.transition = "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+        observer.observe(section);
+    });
+
+    // Add CSS rule dynamically for the reveal
+    const style = document.createElement('style');
+    style.innerHTML = `
+        section.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Update DOM ready listener
+document.addEventListener("DOMContentLoaded", () => {
+    updateFooter();
+    setupNavigation();
+    setupScrollReveal();
+    
+    // Check which page we are on
+    const programContainer = document.getElementById("program-cards");
+    if (programContainer) {
+        displayPrograms(programContainer);
+    }
+    
+    const contactForm = document.getElementById("interest-form");
+    if (contactForm) {
+        setupFormHandling(contactForm);
+    }
+});

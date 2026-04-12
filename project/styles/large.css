@@ -1,74 +1,95 @@
 @media screen and (min-width: 768px) {
+    /* Header & Navigation */
     header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
+        padding: 0.75rem 4rem;
     }
 
-    .header-top {
-        width: auto;
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+        max-width: none;
     }
 
     #menu-button {
         display: none;
     }
 
-    nav {
-        width: auto;
-    }
-
     .nav-links {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        padding: 0;
     }
 
-    .nav-links.active {
-        display: flex;
+    .nav-links li a {
+        padding: 0.625rem 1.25rem;
     }
 
-    .nav-links a {
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid-3-col {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    /* Hero Section - Space Optimized */
     .hero {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
+        grid-template-columns: 1.2fr 1fr;
         text-align: left;
-        padding: 3rem;
+        padding: 5rem;
+        gap: 4rem;
+    }
+
+    .hero:nth-of-type(even) {
+        direction: rtl;
+    }
+
+    .hero:nth-of-type(even) .hero-text {
+        direction: ltr;
     }
 
     .hero img {
-        width: 50%;
+        height: 500px;
         margin-bottom: 0;
     }
 
-    .hero-text {
-        width: 50%;
+    .hero-text h2 {
+        font-size: 3.5rem;
     }
 
-    form {
-        max-width: 600px;
-        margin: 0 auto;
+    /* Grid Layouts - Balanced */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    /* Desktop Footer */
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: left;
+    }
+
+    .footer-brand {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info {
+        align-items: flex-start;
+    }
+
+    .contact-item {
+        justify-content: flex-start;
+    }
+
+    .footer-links {
+        align-items: flex-start;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 1200px) {
+    main {
+        padding: 6rem 2rem;
+    }
+    
+    .hero {
+        padding: 6rem;
     }
 }

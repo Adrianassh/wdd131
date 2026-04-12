@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Project - Gimnasio Campestre Marcello IAFrancesco</title>
+    <meta name="description" content="Discover our educational project, inspired by Montessori and focused on the 'Campestre' philosophy in Cajicá.">
+    <meta name="author" content="Adriana Sandoval">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/logo.jpeg" alt="Gimnasio Campestre Marcello IAFrancesco Logo">
+                <h1>Gimnasio Campestre Marcello IAFrancesco</h1>
+            </div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Our Project</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-overview">
+            <h2>Our Educational Philosophy</h2>
+            <p>At Gimnasio Campestre Marcello IAFrancesco, we believe that education is more than just academic performance. It is about fostering a lifelong love for learning. Our "Educational Project" (PEI) is built on three main pillars:</p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+                <li><strong>Montessori Inspiration:</strong> We provide environments that allow students to lead their own discovery journey.</li>
+                <li><strong>Values & Integrity:</strong> Every lesson is infused with values like respect, honesty, and empathy.</li>
+                <li><strong>Campestre Environment:</strong> Our campus in Cajicá offers wide open spaces where students connect with nature every day.</li>
+            </ul>
+        </section>
+
+        <section id="educational-levels">
+            <h2>Educational Levels & Programs</h2>
+            <div id="program-cards" class="grid-container">
+                <!-- Content injected dynamically by main.js -->
+                <p>Loading programs...</p>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Life at Marcello</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <img src="images/image8.jpg" alt="Child in spacesuit" loading="lazy">
+                    <div class="card-content">
+                        <h3>Future Explorers</h3>
+                        <p>Our students are encouraged to dream big and reach for the stars.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Gimnasio Campestre Marcello IAFrancesco | Adriana Sandoval</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p><a href="references.html">References & Citations</a></p>
+    </footer>
+</body>
+</html>

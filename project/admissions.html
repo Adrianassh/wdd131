@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Gimnasio Campestre Marcello IAFrancesco</title>
+    <meta name="description" content="Apply for enrollment at Gimnasio Campestre Marcello IAFrancesco. Join our community in Cajicá.">
+    <meta name="author" content="Adriana Sandoval">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/logo.jpeg" alt="Gimnasio Campestre Marcello IAFrancesco Logo">
+                <h1>Gimnasio Campestre Marcello IAFrancesco</h1>
+            </div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Our Project</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="admissions-intro">
+            <h2>Join Our Community</h2>
+            <p>We are delighted that you are considering Gimnasio Campestre Marcello IAFrancesco for your child's education. Our admissions process is designed to ensure a good fit between the family and our educational project.</p>
+        </section>
+
+        <section id="interest-form-section">
+            <h2>Express Your Interest</h2>
+            <p id="submission-count" class="mb-1" style="font-weight: bold; color: var(--secondary-color);"></p>
+            <form id="interest-form" action="#" method="get">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>
+                        Full Name *
+                        <input type="text" id="name" name="name" required placeholder="Enter parent/guardian full name">
+                    </label>
+                    <label>
+                        Email Address *
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </label>
+                    <label>
+                        Phone Number *
+                        <input type="tel" id="phone" name="phone" required placeholder="300-000-0000">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Student Information</legend>
+                    <label>
+                        Child's Age *
+                        <input type="number" id="age" name="age" min="1" max="12" required>
+                    </label>
+                    <label>
+                        Grade of Interest *
+                        <select id="grade" name="grade" required>
+                            <option value="" disabled selected>Select a grade</option>
+                            <option value="preschool">Preschool</option>
+                            <option value="kindergarten">Kindergarten</option>
+                            <option value="primary1">Primary 1st Grade</option>
+                            <option value="primary2">Primary 2nd Grade</option>
+                            <option value="primary3">Primary 3rd Grade</option>
+                            <option value="primary4">Primary 4th Grade</option>
+                            <option value="primary5">Primary 5th Grade</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Details</legend>
+                    <label>
+                        Comments or Questions
+                        <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your child or ask a question"></textarea>
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit Expression of Interest</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Gimnasio Campestre Marcello IAFrancesco | Adriana Sandoval</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <p><a href="references.html">References & Citations</a></p>
+    </footer>
+</body>
+</html>
